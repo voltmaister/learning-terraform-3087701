@@ -28,9 +28,9 @@ resource "aws_instance" "blog" {
   user_data = <<-EOF
               #!/bin/bash
               apt-get update -y
-              apt-get install -y default-jdk tomcat10
-              systemctl enable tomcat10
-              systemctl start tomcat10
+              apt-get install -y nginx
+              systemctl enable nginx
+              systemctl start nginx
               EOF
 
   tags = {
