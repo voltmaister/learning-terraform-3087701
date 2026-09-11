@@ -17,7 +17,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   
   # Update this to t3.micro
-  instance_type = "t3.micro" 
+  instance_type = var.instance_type
 
   # This script installs Tomcat and Java automatically on first boot
   user_data = <<-EOF
